@@ -1,0 +1,963 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mini-navbar {
+    background-color: #87CEFA;
+    /* light sky blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 0 11px;
+    font-size: 13px;
+    position: relative;
+}
+
+.mini-text {
+    margin: 0;
+    text-align: center;
+    display: flex;
+}
+
+.mini-link {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mini-link u {
+  color: black;
+}
+
+.track-link {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: black;
+    font-size: 11px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.track-link:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    padding: 16px 20px;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.navbar-components {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar-items {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    position: relative;
+}
+
+.navbar-items a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/*SALE DROPDOWN*/
+.hover-box-sale {
+    display: none;
+    position: absolute;
+    left: 5%;
+    margin-top: 10px;
+    transform: translate(-20%, -4%);
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: 1px solid transparent;
+    z-index: 100;
+    white-space: nowrap;
+    min-width: 700px;
+    width: 700px;
+    height: 280px;
+}
+
+.img-row {
+    display: flex;
+    gap: 10px;
+}
+
+.img-wrapper-sale {
+    cursor: pointer;
+}
+
+.img-wrapper-sale img {
+    width: 212px;
+    height: 190px;
+}
+
+.img-wrapper-sale h4 {
+    text-align: center;
+}
+
+.img-wrapper-sale:hover {
+    text-decoration: underline;
+}
+
+.nav-item:hover .hover-box-sale {
+    display: block;
+}
+
+/* for NEW IN  */
+.hover-box-new {
+    display: none;
+    position: absolute;
+    left: 5%;
+    transform: translate(12%, -1%);
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow:
+        0 6px 8px rgba(0, 0, 0, 0.1),
+        /* Bottom shadow */
+        6px 0 8px -4px rgba(0, 0, 0, 0.1),
+        /* Right shadow (adjusted) */
+        -6px 0 8px -4px rgba(0, 0, 0, 0.1);
+    /* Left shadow (adjusted) */
+    border-top: 1px solid transparent;
+    z-index: 100;
+    white-space: nowrap;
+    min-width: 270px;
+    width: 200px;
+    height: 300px;
+}
+
+.img-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper-new {
+    cursor: pointer;
+}
+
+.img-wrapper-new img {
+    width: 210px;
+    height: 210px;
+}
+
+.img-wrapper-new h4 {
+    text-align: center;
+}
+
+.img-wrapper-new:hover {
+    text-decoration: underline;
+}
+
+.nav-item:hover .hover-box-new {
+    display: block;
+}
+
+/* for FABRICS  */
+.hover-box-fabric {
+    display: none;
+    position: absolute;
+    left: 5%;
+    transform: translate(-23%, -1%);
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow:
+        0 6px 8px rgba(0, 0, 0, 0.1),
+        /* Bottom shadow */
+        6px 0 8px -4px rgba(0, 0, 0, 0.1),
+        /* Right shadow (adjusted) */
+        -6px 0 8px -4px rgba(0, 0, 0, 0.1);
+    /* Left shadow (adjusted) */
+    border-top: 1px solid transparent;
+    z-index: 100;
+    white-space: nowrap;
+    min-width: 950px;
+    width: 950px;
+    height: 350px;
+}
+
+.img-wrapper-fabric {
+    cursor: pointer;
+}
+
+.img-wrapper-fabric img {
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    right: 3%;
+    top: 11%;
+}
+
+.txt-wrapper-fabric {
+    position: absolute;
+    left: 5%;
+    top: 11%;
+    width: 40%;
+}
+
+.txt-wrapper-fabric a:hover {
+    text-decoration: underline;
+}
+
+.nav-item:hover .hover-box-fabric {
+    display: block;
+}
+
+/* for READY TO WEAR  */
+.hover-box-ready {
+    display: none;
+    position: absolute;
+    left: 5%;
+    transform: translate(-33%, 1%);
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow:
+        0 6px 8px rgba(0, 0, 0, 0.1),
+        /* Bottom shadow */
+        6px 0 8px -4px rgba(0, 0, 0, 0.1),
+        /* Right shadow (adjusted) */
+        -6px 0 8px -4px rgba(0, 0, 0, 0.1);
+    /* Left shadow (adjusted) */
+    border-top: 1px solid transparent;
+    z-index: 100;
+    white-space: nowrap;
+    min-width: 800px;
+    width: 1000px;
+    height: 500px;
+}
+
+.img-wrapper-ready {
+    cursor: pointer;
+}
+
+.img-wrapper-ready img {
+    width: 310px;
+    height: 320px;
+    position: absolute;
+    right: 3%;
+    top: 6%;
+}
+
+.txt-wrapper-ready {
+    position: absolute;
+    left: 5%;
+    top: 6%;
+    width: 40%;
+    display: flex;
+    gap: 120px;
+}
+
+.txt-wrapper-ready a:hover {
+    text-decoration: underline;
+}
+
+.nav-item:hover .hover-box-ready {
+    display: block;
+}
+
+/* for HOME */
+.hover-box-home {
+    display: none;
+    position: absolute;
+    left: 5%;
+    transform: translate(-33%, 1%);
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow:
+        0 6px 8px rgba(0, 0, 0, 0.1),
+        /* Bottom shadow */
+        6px 0 8px -4px rgba(0, 0, 0, 0.1),
+        /* Right shadow (adjusted) */
+        -6px 0 8px -4px rgba(0, 0, 0, 0.1);
+    /* Left shadow (adjusted) */
+    border-top: 1px solid transparent;
+    z-index: 100;
+    white-space: nowrap;
+    min-width: 1000px;
+    width: 1000px;
+    height: 400px;
+}
+
+.img-wrapper-home {
+    cursor: pointer;
+}
+
+.img-wrapper-home img {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    right: 3%;
+    top: 8%;
+}
+
+.txt-wrapper-home {
+    position: absolute;
+    left: 5%;
+    top: 8%;
+    width: 40%;
+    display: flex;
+    gap: 120px;
+}
+
+.txt-wrapper-home a {
+    color: rgb(44, 44, 44);
+}
+
+.txt-wrapper-home a:hover {
+    text-decoration: underline;
+}
+
+.nav-item:hover .hover-box-home {
+    display: block;
+}
+
+.first-txt-home {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/*For search icon dropdown*/
+.search-dropdown {
+    position: absolute;
+    top: calc(10% + 40px);
+    left: 9%;
+    transform: none;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow:
+        0 6px 8px rgba(0, 0, 0, 0.1),
+        /* Bottom shadow */
+        6px 0 8px -4px rgba(0, 0, 0, 0.1),
+        /* Right shadow (adjusted) */
+        -6px 0 8px -4px rgba(0, 0, 0, 0.1);
+    /* Left shadow (adjusted) */
+    border-top: 1px solid transparent;
+    z-index: 100;
+    white-space: nowrap;
+    width: 90%;
+    max-width: 1260px;
+    height: 200px;
+    padding: 10px 10px 10px 30px;
+    /* top right bottom left */
+
+}
+
+.text-search {
+    color: black;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.search-icon-dropdown {
+    font-size: 25px;
+    border-bottom: 1px solid black;
+    min-width: 40px;
+    display: inline-block;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.input-group-search {
+    position: relative;
+    margin-bottom: 27px;
+}
+
+.input-group-search input {
+    width: 96%;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group-search input:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.input-group-search label {
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    color: #767676;
+    font-size: 13px;
+    font-family: "Playfair Display", serif;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-group-search input:focus+label,
+.input-group-search input:not(:placeholder-shown)+label {
+    top: -6px;
+    left: 5px;
+    font-size: 12px;
+    color: #272727;
+}
+
+.input-group-search label span,
+.remember-forgot label span {
+    color: red;
+}
+
+
+/* Grey Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.5); 
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 998; 
+  backdrop-filter: blur(2px);
+}
+
+/* Show the overlay when dropdown opens */
+#overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hidden login dropdown inside person */
+.dropdown-content {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px); /* More up */
+  background-color: white;
+  width: 425px;
+  height: 450px;
+  border: 2px thin black;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none; 
+  transition: all 0.5s ease;
+}
+
+.dropdown-content.show {
+  top: 18%; 
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+.dropdown-content h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.dropdown-content p{
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.input-group {
+      position: relative;
+      margin-bottom: 27px;
+    }
+
+    .input-group input {
+      width: 91%;
+      margin-left: 17px;
+      padding: 10px 5px;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      outline: none;
+      background: transparent;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-group input:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6); 
+    }
+
+    .input-group label {
+      position: absolute;
+      top: 14px;
+      left: 18px;
+      color: #767676;
+      font-size: 15px;
+      font-family: "Playfair Display", serif;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label {
+      top: -9px;
+      left: 18px;
+      font-size: 12px;
+      color: #272727;
+    }
+
+    .input-group label span,
+    .remember-forgot label span {
+      color: red;
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 90px;
+      margin-left: -6px;
+      margin-bottom: 25px;
+    }
+
+    .remember-forgot input[type="checkbox"] {
+      margin-right: 2px;
+    }
+
+    .checkbox {
+        width: 27px;
+        height: 15px;
+        accent-color: black;
+    }
+
+    .remember-forgot label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      
+    }
+
+    .remember-forgot a {
+      border-bottom: 1px solid black;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .dropdown-content button,
+    .forgot-dropdown button,
+    .signup-btn-dropdown button {
+      width: 90%;
+      padding: 16px;
+      background-color: rgb(42, 42, 42);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 25px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      text-align: center;
+      display: block;
+      margin: 20px auto;
+      outline: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-content button:hover,
+    .forgot-dropdown button:hover,
+    .signup-btn-dropdown button:hover {
+      background-color: black;
+      transform: translateY(-3px); /* lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      
+}
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #aaa;
+    }
+
+    .divider span {
+      margin: 0 10px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .social-icons-signin {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .social-icons i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .google-icon-login {
+      color: #DB4437;
+    }
+
+    .facebook-icon-login {
+      color: #1877F2;
+    }
+
+    .signup {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .signup a {
+      text-decoration: none;
+      border-bottom: 1px solid black;
+      color: black;
+      font-weight: bold;
+      font-family: "Playfair Display", serif;
+    }
+
+/* Forgot Password Dropdown */
+.forgot-dropdown {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  width: 500px;
+  height: 250px;
+  background-color: white;
+  border-radius: 22px;
+  z-index: 9999;
+  border: 1px solid rgb(192, 191, 191);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: top 0.6s ease, opacity 0.6s ease;
+  pointer-events: none;
+  padding-left: 30px;
+}
+
+.forgot-dropdown.show {
+  top: 50%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forgot-dropdown.closing {
+  top: -100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: top 0.9s ease, opacity 0.9s ease;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  font-size: 33px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(85, 85, 85);
+}
+
+.close-btn:hover {
+  color: black;
+  transition: 0.2s ease;
+}
+
+.forgot-dropdown h2 {
+  font-size: 25px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: rgb(18, 18, 18);
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.forgot-dropdown p {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  color: #848383;
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+
+    .input-group-forgot {
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .input-group-forgot input {
+      width: 91%;
+      padding: 10px 5px;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      outline: none;
+      background: transparent;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-group-forgot input:focus {
+         border-bottom: 1px solid rgba(0, 0, 0, 0.6); 
+    }
+
+    .input-group-forgot label {
+      position: absolute;
+      top: 11px;
+      left: 1px;
+      color: #767676;
+      font-size: 15px;
+      font-family: "Playfair Display", serif;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-group-forgot input:focus + label,
+    .input-group-forgot input:not(:placeholder-shown) + label {
+      top: -7px;
+      left: 3px;
+      font-size: 12px;
+      color: #272727;
+    }
+
+    .input-group-forgot label span {
+      color: red;
+    }
+
+    .forgot-dropdown button {
+  width: 93%;
+  height: 18%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: rgb(42, 42, 42);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: -3px;
+}
+
+.forgot-dropdown button:hover {
+  background-color: black;
+  transition: 0.2s ease;
+}
+
+.container-signup-dropdown {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  background-color: white;
+  z-index: 9999;
+  width: 25%;
+  border: 1px solid rgb(192, 191, 191);
+  border-radius: 25px;
+  height: 650px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: top 0.6s ease, opacity 0.6s ease;
+  pointer-events: none;
+  padding-top: 15px;
+}
+
+.container-signup-dropdown.show {
+  top: 50%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container-signup-dropdown.closing {
+  top: -100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: top 0.9s ease, opacity 0.9s ease;
+}
+
+.container-signup-dropdown h2 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    }
+
+  .container-signup-dropdown h4 {
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+    }
+
+    .input-group-signup-dropdown {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .input-group-signup-dropdown input {
+      width: 91%;
+      margin-left: 17px;
+      padding: 10px 5px;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      outline: none;
+      background: transparent;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-group-signup-dropdown input:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6); 
+    }
+
+    .input-group-signup-dropdown label {
+      position: absolute;
+      top: 14px;
+      left: 18px;
+      color: #767676;
+      font-size: 15px;
+      font-family: "Playfair Display", serif;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-group-signup-dropdown input:focus + label,
+    .input-group-signup-dropdown input:not(:placeholder-shown) + label {
+      top: -9px;
+      left: 18px;
+      font-size: 10px;
+      color: #272727;
+    }
+
+    .input-group-signup-dropdown label span {
+      color: red;
+    }
+
+     .container-signup-dropdown p {
+      text-align: center;
+      font-size: 12px;
+      font-family: 'Montserrat', sans-serif;
+      color: black;
+      margin-bottom: 1px;
+    }
+
+    .checkbox-signup-dropdown {
+      margin-right: 5px;
+    }
+
+    .signup-checkbox-dropdown  input[type="checkbox"]{
+      margin-left: 20px;
+      margin-top: 10px;
+      width: 20px;
+      height: 15px;
+      accent-color: black;
+    }
+
+    .signup-checkbox-dropdown label {
+      color: #4a4a4a;
+    }
+
+    .signup-btn-dropdown {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      margin-top: 25px;
+      margin-bottom: 25px;
+
+      width: 90%;
+      padding: 16px;
+      background-color: rgb(42, 42, 42);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 25px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      text-align: center;
+      display: block;
+      margin: 20px auto;
+      outline: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .signup-btn-dropdown:hover {
+      background-color: black;
+      transform: translateY(-3px); /* lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Close Button */
+.close-btn-Signup {
+  position: absolute;
+  top: 3%;
+  right: 7%;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(85, 85, 85);
+}
+
+.close-btn-Signup:hover {
+  color: black;
+  transition: all 0.2s ease;
+}
